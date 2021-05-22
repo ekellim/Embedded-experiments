@@ -1,0 +1,17 @@
+Edge TPU Compiler version 15.0.340273435
+Input: model_1/quantmodel.tflite
+Output: model_1/quantmodel_edgetpu.tflite
+
+Operator                       Count      Status
+
+FULLY_CONNECTED                2          More than one subgraph is not supported
+MAX_POOL_2D                    1          More than one subgraph is not supported
+MAX_POOL_2D                    1          Mapped to Edge TPU
+RESHAPE                        3          More than one subgraph is not supported
+RESHAPE                        2          Mapped to Edge TPU
+SOFTMAX                        1          More than one subgraph is not supported
+EXPAND_DIMS                    1          Mapped to Edge TPU
+EXPAND_DIMS                    3          Tensor has unsupported rank (up to 3 innermost dimensions mapped)
+EXPAND_DIMS                    1          More than one subgraph is not supported
+CONV_2D                        1          Mapped to Edge TPU
+CONV_2D                        2          More than one subgraph is not supported
