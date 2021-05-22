@@ -24,7 +24,7 @@ for model_nr in np.arange(5):
   DATA_PATH=DATASET_PATH+'/model_{}/'.format(model_nr)
   TFLITE_PATH=DATASET_PATH+'/model_{}/model.tflite'.format(model_nr)
   QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quantmodel.tflite'.format(model_nr)
-  TPU_QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quant_model_edgetpu.tflite'.format(model_nr)
+  TPU_QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quantmodel_edgetpu.tflite'.format(model_nr)
 
   
     
