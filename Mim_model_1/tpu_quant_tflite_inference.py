@@ -15,7 +15,10 @@ accuracies = []
 micro=[]
 macro=[]
 weighted=[]
-f1=np.ndarray((5,10))
+if DATASET_PATH == 'ESC-50':
+  f1=np.ndarray((5,50))
+else:
+  f1=np.ndarray((5,10))
 times = []
 length=5
 
@@ -44,7 +47,6 @@ for model_nr in np.arange(5):
 
   input_shape = input_details[0]['shape']
   for i in range(len(X_test)):
-      print(i)
 #       set_input(interpreter, x_test[i])
       input_data = X_test[i].reshape(input_shape).astype(np.int8)
       #input_data = input_data.astype(np.float32)
