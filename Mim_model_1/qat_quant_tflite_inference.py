@@ -24,7 +24,7 @@ length=5
 
 for model_nr in np.arange(5):  
   MODEL_PATH=DATASET_PATH+'/qawmodel_{}/quant_qawmodel.h5'.format(model_nr)
-  DATA_PATH=DATASET_PATH+'/qawmodel_{}'.format(model_nr)
+  DATA_PATH=DATASET_PATH+'/qawmodel_{}/'.format(model_nr)
   TFLITE_PATH=DATASET_PATH+'/qawmodel_{}/qawmodel.tflite'.format(model_nr)
   QUANTIZED_TFLITE_PATH=DATASET_PATH+'/qawmodel_{}/quant_qawmodel.tflite'.format(model_nr)
 
