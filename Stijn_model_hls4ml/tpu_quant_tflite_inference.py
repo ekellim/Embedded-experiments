@@ -45,10 +45,7 @@ for model_nr in np.arange(5):
   input_shape = input_details[0]['shape']
   for i in range(len(X_test)):
 #       set_input(interpreter, x_test[i])
-      input_scale, input_zero_point = input_details[0]["quantization"]
-      rescaled = X_test[i] / input_scale + input_zero_point
-      input_data = rescaled.reshape(input_shape).astype(np.int8)
-      #input_data = input_data.astype(np.float32)
+      input_data = X_test[i].astype(np.float32)
       interpreter.set_tensor(input_details[0]['index'], input_data)
       start = time.perf_counter()
       interpreter.invoke()
