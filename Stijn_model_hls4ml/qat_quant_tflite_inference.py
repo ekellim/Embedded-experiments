@@ -28,6 +28,7 @@ for model_nr in np.arange(5):
   TFLITE_PATH=DATASET_PATH+'/qawmodel_{}/qawmodel.tflite'.format(model_nr)
   QUANTIZED_TFLITE_PATH=DATASET_PATH+'/qawmodel_{}/quant_qawmodel.tflite'.format(model_nr)
 
+
   X_test=np.load(DATA_PATH+'X_test.npy')
   y_test=np.load(DATA_PATH+'y_test.npy')
   
