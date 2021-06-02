@@ -24,7 +24,7 @@ length=5
 
 for model_nr in np.arange(5):  
   DATA_PATH=DATASET_PATH+'/qawmodel_{}/'.format(model_nr)
-  TPU_QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quant_qawmodel_edgetpu.tflite'.format(model_nr)
+  TPU_QUANTIZED_TFLITE_PATH=DATASET_PATH+'/qawmodel_{}/quant_qawmodel_edgetpu.tflite'.format(model_nr)
 
     
   X_test=np.load(DATA_PATH+'X_test.npy')
