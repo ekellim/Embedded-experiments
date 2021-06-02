@@ -29,12 +29,9 @@ for model_nr in np.arange(5):
   QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quantmodel.tflite'.format(model_nr)
   TPU_QUANTIZED_TFLITE_PATH=DATASET_PATH+'/model_{}/quantmodel_edgetpu.tflite'.format(model_nr)
 
-  
     
   X_test=np.load(DATA_PATH+'X_test.npy')
   y_test=np.load(DATA_PATH+'y_test.npy')
-  X_train=np.load(DATA_PATH+'X_train.npy')
-  y_train=np.load(DATA_PATH+'y_train.npy')
   
   acc = 0
   y_pred=np.zeros(len(X_test))
