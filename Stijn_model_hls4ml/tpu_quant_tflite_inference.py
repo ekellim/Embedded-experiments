@@ -46,6 +46,8 @@ for model_nr in np.arange(5):
   for i in range(len(X_test)):
 #       set_input(interpreter, x_test[i])
       input_data = X_test[i].astype(np.float32)
+      print(input_data.shape)
+      print(input_shape)
       interpreter.set_tensor(input_details[0]['index'], input_data)
       start = time.perf_counter()
       interpreter.invoke()
