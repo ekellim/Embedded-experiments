@@ -22,6 +22,7 @@ for model_nr in np.arange(20):
   DATA_PATH='tflite/'
   TFLITE_PATH='tflite/model.tflite'
   QUANTIZED_TFLITE_PATH='tflite/qmodel.tflite'
+  TPU_QUANTIZED_TFLITE_PATH='tflite/qmodel_edgetpu.tflite'
   X_test=np.load(DATA_PATH+'X_test.npy')
   y_test=np.load(DATA_PATH+'y_test.npy')
   
