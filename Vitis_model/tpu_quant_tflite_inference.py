@@ -9,7 +9,7 @@ import sys
 from glob import glob
 from sklearn.metrics import f1_score, accuracy_score
 
-
+acc=0
 accuracies = []
 times = []
 length=5
