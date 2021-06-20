@@ -41,7 +41,6 @@ for model_nr in np.arange(1):
     times.append(inference_time * 1000)
     output_data = interpreter.get_tensor(output_details[0]['index'])
     y_pred[i]=np.argmax(output_data)
-    print(np.argmax(output_data), np.argmax(y_test[i]))
     if np.argmax(output_data) == np.argmax(y_test[i]):
         acc += 1
   Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
