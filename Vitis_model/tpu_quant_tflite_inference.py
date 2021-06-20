@@ -11,10 +11,6 @@ from sklearn.metrics import f1_score, accuracy_score
 
 
 accuracies = []
-micro=[]
-macro=[]
-weighted=[]
-f1=np.ndarray((5,10))
 times = []
 length=5
 
@@ -48,14 +44,10 @@ for model_nr in np.arange(20):
     if np.argmax(output_data) == np.argmax(y_test[i]):
         acc += 1
   Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
-  micro.append(f1_score(Y_test, y_pred, average='micro'))
-  macro.append(f1_score(Y_test, y_pred, average='macro'))
-  weighted.append(f1_score(Y_test, y_pred, average='weighted'))
-  f1[model_nr]=(f1_score(Y_test, y_pred, average=None))
   acc = (acc/len(X_test)) * 100
   accuracies.append(acc)
   Y_test = np.argmax(y_test, axis=1)
 
 
-print("Accuracy mean, std | time mean, std (ms) | Micro f1 mean, std | Macro f1 mean, std | Weighted f1 mean, std")
-print(np.mean(accuracies), '\t', np.std(accuracies), '\t', np.mean(times), '\t', np.std(times), '\t', np.mean(micro), '\t', np.std(micro),'\t', np.mean(macro), '\t', np.std(macro), '\t', np.mean(weighted), '\t', np.std(weighted))
+print("Accuracy mean, std | time mean, std (ms)")
+print(np.mean(accuracies), '\t', np.std(accuracies), '\t', np.mean(times), '\t', np.std(times), '\t')
