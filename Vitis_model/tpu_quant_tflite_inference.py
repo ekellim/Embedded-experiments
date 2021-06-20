@@ -14,7 +14,7 @@ accuracies = []
 times = []
 length=5
 
-for model_nr in np.arange(20):  
+for model_nr in np.arange(1):  
   DATA_PATH='tflite/'
   TFLITE_PATH='tflite/model.tflite'
   QUANTIZED_TFLITE_PATH='tflite/qmodel.tflite'
@@ -41,7 +41,7 @@ for model_nr in np.arange(20):
     times.append(inference_time * 1000)
     output_data = interpreter.get_tensor(output_details[0]['index'])
     y_pred[i]=np.argmax(output_data)
-    print(output_data)
+    print(np.argmax(output_data), np.argmax(y_test[i])
     if np.argmax(output_data) == np.argmax(y_test[i]):
         acc += 1
   Y_test = np.argmax(y_test, axis=1) # Convert one-hot to index
