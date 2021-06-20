@@ -50,4 +50,4 @@ for model_nr in np.arange(20):
 
 
 print("Accuracy mean, std | time mean, std (ms)")
-print(np.mean(accuracies), '\t', np.std(accuracies), '\t', np.mean(times), '\t', np.std(times), '\t')
+print(acc, '\t', np.std(accuracies), '\t', np.mean(times), '\t', np.std(times), '\t')
