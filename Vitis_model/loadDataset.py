@@ -30,7 +30,10 @@ def loadDataset(df):
     # Load the training data and labels
     X, y = zip(*[loadRowFromDataframe(f,l) for f,l in zip(df['filePath'], df['classID'])])
 
+    print(y)
     # Convert the y lists to categorical data
+    a=np.eye(10)[y]
+    print(a)
     y = np.eye(10)[y]
 
     # Convert X to an array
