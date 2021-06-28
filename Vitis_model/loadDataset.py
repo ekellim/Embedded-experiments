@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import os.path
 import cv2
-from tensorflow.keras.utils import to_categorical
 from config import *
 
 
@@ -32,7 +31,7 @@ def loadDataset(df):
     X, y = zip(*[loadRowFromDataframe(f,l) for f,l in zip(df['filePath'], df['classID'])])
 
     # Convert the y lists to categorical data
-    y = to_categorical(y, num_classes=10)
+    y = np.eye(10)[y]
 
     # Convert X to an array
     X = np.array(X)
