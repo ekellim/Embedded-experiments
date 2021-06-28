@@ -3,14 +3,14 @@
 import numpy as np
 import pandas as pd
 import os.path
-from skimage import io
+import cv2
 from tensorflow.keras.utils import to_categorical
 from config import *
 
 
 def loadImage(filePath):
     # open image as BGR
-    image = io.imread(filePath, as_gray=True)
+    image = cv2.imread(filePath, cv2.IMREAD_GRAYSCALE)
 
     # normalize
     image = image/255.0
